@@ -1,5 +1,5 @@
 import './App.css';
-import { MapContainer, TileLayer, Marker,   useMapEvent, } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker,   useMapEvent, Polyline } from 'react-leaflet';
 import {useState, useCallback, useEffect} from "react";
 
 
@@ -49,6 +49,8 @@ function App(type, handler) {
         console.log(markers)
     },[markers])
 
+    const coordinates = markers.map((marker) => marker);
+
   return (
     <div className="App">
         {/*долгота и широта*/}
@@ -74,6 +76,9 @@ function App(type, handler) {
                     {/*<Popup>Маркер {marker.id}</Popup>*/}
                 </Marker>
             ))}
+
+            {coordinates.length > 1 && <Polyline positions={coordinates} color="blue" smoothFactor={1.5} />}
+
         </MapContainer>
     </div>
   );
