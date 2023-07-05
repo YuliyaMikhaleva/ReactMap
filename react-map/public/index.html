@@ -22,9 +22,36 @@
             crossorigin=""
     />
     <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
+<!--    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"-->
+<!--            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="-->
+<!--            crossorigin=""></script>-->
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      #map {
+        width: 100vw;
+        height: 100vh;
+      }
+      .control-panel {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 320px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        padding: 12px 24px;
+        margin: 20px;
+        font-size: 13px;
+        line-height: 2;
+        color: #6b6b76;
+        text-transform: uppercase;
+        outline: none;
+      }
+    </style>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -45,11 +72,19 @@
 <!--        }).addTo(map);-->
 <!--      });-->
 <!--    </script>-->
+<!--    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">-->
+
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+<!--      <div id="map"></div>-->
+    </div>
+<!--    <script type="module" type="text/javascript">-->
+<!--      import {renderToDom} from './src/App.js';-->
+<!--      renderToDom(document.getElementById('map'));-->
+<!--    </script>-->
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
